@@ -1,4 +1,4 @@
-From tomcat:latest
+FROM tomcat:latest
 
 # Maintainer 
 MAINTAINER Keerthi Reddy
