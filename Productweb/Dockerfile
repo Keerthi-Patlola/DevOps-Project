@@ -1,5 +1,3 @@
-FROM openjdk:8-alpine
-
 FROM tomcat:latest
 
 MAINTAINER "Keerthi Reddy"
