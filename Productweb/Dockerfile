@@ -1,5 +1,3 @@
-FROM tomcat:latest
-
+FROM tomcat
 MAINTAINER "Keerthi Reddy"
-
 COPY ./Productweb.war /usr/local/tomcat/webapp
