@@ -1,5 +1,4 @@
 # Pull image
-
 From tomcat
 MAINTAINER "Keerthi Reddy"
 COPY ./Productweb.war /usr/local/tomcat/webapp
