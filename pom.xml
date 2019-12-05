@@ -51,7 +51,7 @@
         </plugin>
         <plugin>
           <artifactId>maven-war-plugin</artifactId>
-          <version>3.6.3</version>
+         <!-- <version>3.6.3</version> -->
           <configuration>
             <webXml>Productweb\src\main\webapp\WEB-INF\web.xml</webXml>        
           </configuration>
