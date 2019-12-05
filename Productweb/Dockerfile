@@ -1,4 +1,4 @@
-# Pull image
+FROM openjdk:8-alpine
 
 FROM tomcat:latest
 
