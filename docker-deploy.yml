@@ -8,6 +8,6 @@ metadata:
       containers:
       - name: Devops-Deployment-project
         image: keerthi1987/docimg
-        imagePullPolicy: Always
+       - imagePullPolicy: Always
         ports:
          - containerPort: 8080
