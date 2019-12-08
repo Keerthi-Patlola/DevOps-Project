@@ -1,21 +1,26 @@
-apiVersion: apps/v1
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
-  name: devops-deployment
-  labels:
-    app: tomcat
+  name: docker-deployment
 spec:
-  replicas: 1
   selector:
     matchLabels:
-      app: tomcat
+      app: devops-project
+  replicas: 1 # tells deployment to run 2 pods matching the template
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+
   template:
     metadata:
       labels:
-        app: tomcat
+        app: devops-project
     spec:
       containers:
-      - name: my_pod
+      - name: k8-devops-project
         image: keerthi1987/docimg
+        imagePullPolicy: Always
         ports:
-        - containerPort: 80
+        - containerPort: 8080
