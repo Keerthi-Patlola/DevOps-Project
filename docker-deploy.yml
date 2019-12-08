@@ -5,7 +5,7 @@ metadata:
   labels:
     app: tomcat
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: tomcat
@@ -15,7 +15,7 @@ spec:
         app: tomcat
     spec:
       containers:
-      - name: tomcat
+      - name: my_pod
         image: keerthi1987/docimg
         ports:
         - containerPort: 80
