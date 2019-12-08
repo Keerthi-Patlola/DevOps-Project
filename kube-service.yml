@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: devops-service
   labels:
-    app: k8-devops-project
+    app: devops-project
 spec:
   selector:
-    app: k8-devops-project
+    app: devops-project
   type: LoadBalancer
   ports:
     - port: 8080
