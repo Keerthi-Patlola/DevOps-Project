@@ -1,26 +1,21 @@
 apiVersion: apps/v1
-kind: pod
+kind: Deployment
 metadata:
-  name: deployment
+  name: devops-deployment
+  labels:
+    app: tomcat
 spec:
+  replicas: 3
   selector:
     matchLabels:
-      app: devops-project
-  replicas: 1
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 1
-      maxUnavailable: 1
-
+      app: tomcat
   template:
     metadata:
       labels:
-        app: devops-project
+        app: tomcat
     spec:
       containers:
-      - name: devops-project
+      - name: tomcat
         image: keerthi1987/docimg
-        imagePullPolicy: Always
         ports:
-        - containerPort: 8080
+        - containerPort: 80
