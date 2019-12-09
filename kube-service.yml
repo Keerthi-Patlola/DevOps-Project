@@ -1,14 +1,12 @@
 apiVersion: v1
-kind: Service
+kind: Pod
 metadata:
   name: devops-service
   labels:
     app: devops-project
 spec:
-  selector:
-    app: devops-project
-  type: LoadBalancer
+  containers:
+  -name: devops-project
+   image: keerthi1987/docimg
   ports:
-    - port: 8080
-      targetPort: 8080
-      nodePort: 31200
+  -containerPort: 3000
